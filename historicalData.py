@@ -23,9 +23,8 @@ def gethistoricalStockValues(symbol):
 	# url = "http://charting.nasdaq.com/ext/charts.dll?2-1-14-0-0-75-03NA000000TWTR-&SF:43|5-BG=FFFFFF-BT=0-WD=635-HT=395--XTBL-"
 	# print url
 
-
 	url = urlValue+"-XTBL-"
-	#print url
+	print url
 	results = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
 	html_text = results.content
 
@@ -52,5 +51,3 @@ def gethistoricalStockValues(symbol):
 	for res in finalHistoricalSet:
 		print res
 		print ''
-
-gethistoricalStockValues('twtr')
