@@ -10,7 +10,7 @@ from sentiment_analysis import getSentiment
 # print parseStockTwits('FB')
 
 
-ticker = symbolLookUp('amyris')
+ticker = symbolLookUp('microsoft')
 newsArticles = getNewsArticles(ticker)
 tweets = parseStockTwits(ticker)
 data = tweets + newsArticles
