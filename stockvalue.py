@@ -38,7 +38,7 @@ def getStockValue(symbol):
 	print 'StockValue '+stockValue
 	print 'ChangeValue '+changeValue
 	print 'PercentValue '+percentValue
-	print lastUpdatedValue
+	# print lastUpdatedValue
 
 
 

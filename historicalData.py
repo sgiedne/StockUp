@@ -17,7 +17,7 @@ def gethistoricalStockValues(symbol):
 	for hist in hist_data:
 		image = hist.find('img')
 		urlValue = image['src']
-		#print urlValue
+		# print urlValue
 
 
 	# url = "http://charting.nasdaq.com/ext/charts.dll?2-1-14-0-0-75-03NA000000TWTR-&SF:43|5-BG=FFFFFF-BT=0-WD=635-HT=395--XTBL-"
@@ -41,10 +41,10 @@ def gethistoricalStockValues(symbol):
 			cells.append(allrows)
 
 	# print cells
-	finalHistoricalSet = set()
+	finalHistoricalSet = []
 	for cell in cells:
 		for x in cell:
-			finalHistoricalSet.add(cell[0].text + "   " + cell[1].text + "   "+cell[2].text)
+			finalHistoricalSet.append(cell[0].text + "   " + cell[1].text + "   "+cell[2].text)
 
 	print "   Date      Value     Volume"
 	print ''
